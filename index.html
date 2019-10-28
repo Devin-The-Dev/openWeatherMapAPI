@@ -32,9 +32,9 @@
             console.log(response.main.humidity + "%");
             console.log(response.main.temp);
             // Create CODE HERE to transfer content to HTML
-            $(".wind").text(response.wind.speed);
-            $(".humidity").text(response.main.humidity + "%");
-            $(".temp").text(response.main.temp);
+            $(".wind").text("Wind Speed: " + response.wind.speed);
+            $(".humidity").text("Humidity: " + response.main.humidity + "%");
+            $(".temp").text("Temperature (Fahrenheit): " + response.main.temp);
             // Create CODE HERE to calculate the temperature (converted from Kelvin)
             // Hint: To convert from Kelvin to Fahrenheit: F = (K - 273.15) * 1.80 + 32
             function kelvinToFahrenheit() {
@@ -42,7 +42,7 @@
             }
             console.log(kelvinToFahrenheit());
             // Create CODE HERE to dump the temperature content into HTML
-            $(".temp").text(kelvinToFahrenheit());
+            $(".temp").text("Temperature (Fahrenheit): " + kelvinToFahrenheit());
         });
     </script>
 </body>
